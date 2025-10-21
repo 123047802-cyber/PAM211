@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import BotonesScreen from  './BotonesScreen';
 import ContadorScreeen from './ContadorScreen';
 import ModalScreen from './ModalScreen';
+import TextScreen from './TextScreen';
 
 
 export default function MenuScreen() {
@@ -14,6 +15,7 @@ export default function MenuScreen() {
             return <BotonesScreen/>;
         case 'modal':
             return <ModalScreen/>;
+            return <TextScreen/>;
         case 'menu':
             default:
             return (
@@ -40,6 +42,13 @@ export default function MenuScreen() {
               title="Pract. Modal"
               color='#550948ff'
               onPress={() => setScreen('modal')}
+            />
+          </View>
+          <View style={styles.button}>
+            <Button
+              title="Pract. TexScreen"
+              color='#a3156aff'
+              onPress={() => setScreen('text')}
             />
           </View>
         </View>
