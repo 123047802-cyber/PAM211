@@ -1,79 +1,52 @@
-import { StyleSheet, Text, View, Button, Modal } from 'react-native';
+import { Text, StyleSheet, View, Button } from 'react-native'
 import React, { useState } from 'react'
 import BotonesScreen from  './BotonesScreen';
-import ContadorScreeen from './ContadorScreen';
-import ModalScreen from './ModalScreen';
-import TextScreen from './TextScreen';
+import ContadorScreen from './ContadorScreen';
+import TextInputScreen from './TextInputScreen';
+import ImageScreen from './ImageScreen';
 
 
 export default function MenuScreen() {
     const [screen,setScreen]=useState('menu');
+
     switch(screen){
         case 'contador':
-            return <ContadorScreeen/>;
+            return <ContadorScreen/>;
         case 'botones':
             return <BotonesScreen/>;
-        case 'modal':
-            return <ModalScreen/>;
-            return <TextScreen/>;
+        case 'input':
+            return <TextInputScreen/>;
+        case 'image':
+            return <ImageScreen/>;
         case 'menu':
-            default:
+            default: 
             return (
-<View style={styles.container}>
-          <Text style={styles.text}>Menú de practicas</Text>
-
-          <View style={styles.button}>
-            <Button
-              title="Pract. Contador"
-              color="purple"
-              onPress={() => setScreen('contador')}
-            />
-          </View>
-
-          <View style={styles.button}>
-            <Button
-              title="Pract. Botones"
-              color='#b924a0ff'
-              onPress={() => setScreen('botones')}
-            />
-          </View>
-          <View style={styles.button}>
-            <Button
-              title="Pract. Modal"
-              color='#550948ff'
-              onPress={() => setScreen('modal')}
-            />
-          </View>
-          <View style={styles.button}>
-            <Button
-              title="Pract. TexScreen"
-              color='#a3156aff'
-              onPress={() => setScreen('text')}
-            />
-          </View>
-        </View>
-      );
-  }
+            <View style={styles.container}>
+                <Text>Menú de Prácticas</Text>
+                <View style={styles.botonesContainer}>
+                <Button onPress={()=>setScreen('contador')} color='#53094dff' title='Práctica Contador'></Button>
+                <Button onPress={()=>setScreen('botones')} color='#7c056cff' title='Práctica Buttons & Switch'></Button>
+                <Button onPress={()=>setScreen('input')} color='#530953ff' title='Práctica Text Input & Alert'></Button>
+                <Button onPress={()=>setScreen('image')} color='#7a072dff' title='Práctica ImageBakground & SlapshScreen'></Button>
+                </View>
+            </View>
+        )
+    }
+    
 }
-
-
 const styles = StyleSheet.create({
-  container: {
+    container: {
     flex: 1,
-    backgroundColor: '#ffc2f5ff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#f4caf8ff',
+    alignItems: 'center',//trabaja sobre eje x (start, center, end)
+    justifyContent: 'center',//trabaja sobre eje y
   },
-  text: {
-    fontSize: 30,
-    color: '#53094dff',
-    fontWeight: 'bold',
-    marginBottom: 20,
-    textAlign: 'center',
-    fontStyle: 'italic',
-  },
-  button: {
-    marginVertical: 10,
-    width: '40%',
-  },
-});
+    botonesContainer:{
+        marginTop: 30,
+        //flexDirection: 'row',
+        gap:14,
+        color:'#53094dff',
+        
+    },
+
+})
