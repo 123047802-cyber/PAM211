@@ -1,7 +1,8 @@
 import { Text, StyleSheet, View, Image, ImageBackground, Dimensions } from 'react-native'
 import React, {useState, useEffect} from 'react';
 
-const BackgroundImage = require('../assets/descarga (2).jpeg');
+const BackgroundImage = require('../assets/splash-icon.png');
+const InnerBackground = require('../assets/gato.png');
 
 export default function ImageScreen({navigation}){
   const [showSplash, setShowSplash] = useState(true);
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
     padding:20,
   },
   title:{
-    color: '#fff',
+    color: '#252323ff',
     fontSize:32,
     fontWeight: 'bold',
     marginBotton:10,
