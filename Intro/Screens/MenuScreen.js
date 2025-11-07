@@ -6,6 +6,8 @@ import TextInputScreen from './TextInputScreen';
 import ImageScreen from './ImageScreen';
 import Repaso1Screen from './Repaso1Screen';
 import ScrollViewScreen from './ScrollViewScreen';
+import ActivityScreen from './ActivityScreen';
+import ListasScreen from './ListasScreen';
 
 export default function MenuScreen() {
   const [screen, setScreen] = useState('menu');
@@ -21,8 +23,12 @@ export default function MenuScreen() {
       return <ImageScreen />;
     case 'registro':
       return <Repaso1Screen />;
+    case 'activity':
+      return <ActivityScreen />;
     case 'scrollview':
       return <ScrollViewScreen />;
+    case 'Listas':
+      return <ListasScreen />;
     case 'menu':
     default:
       return (
@@ -56,9 +62,19 @@ export default function MenuScreen() {
               title="Práctica Formulario de Registro"
             />
             <Button
+              onPress={() => setScreen('activity')}
+              color="#53094d"
+              title="Práctica Activity Indicator"
+            />
+            <Button
               onPress={() => setScreen('scrollview')}
               color="#53094d"
               title="Práctica ScrollView"
+            />
+            <Button
+              onPress={() => setScreen('Listas')}
+              color="#53094d"
+              title="Práctica Listas"
             />
           </View>
         </View>

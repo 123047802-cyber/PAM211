@@ -1,6 +1,6 @@
 import { Text, StyleSheet, View, TouchableOpacity, Switch } from 'react-native';
 import { useState } from 'react';
-
+//botones para prender y apagar
 export default function BotonesScreen() {
   const [prendido, setPrendido] = useState(false);
   const backgroundColor = prendido ? '#f5f5f5' : '#121212';

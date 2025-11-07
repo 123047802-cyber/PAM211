@@ -1,6 +1,6 @@
 import { Text, StyleSheet, View, FlatList, SectionList } from 'react-native'
 import React from 'react'
-
+//listas
 export default function ListasScreen() {
     const ejercicios = [
         { id: '1', nombre: 'Sentadillas', descripcion: 'Ejercicio para piernas y glúteos' },
@@ -39,12 +39,10 @@ export default function ListasScreen() {
             <View style={styles.listContainer}>
                 <Text style={styles.titulo}>Contactos</Text>
                 <SectionList
-                    sections={contactos}
-                    // renderItem: Mostrar elementos individuales en una lista
+                    sections={contactos}a
                     renderItem={({item}) => (
                         <Text style={styles.item}>{item}</Text>
                     )}
-                    // renderSectionHeader = renderizar el cabecero de section list
                     renderSectionHeader={({section}) => (
                         <Text style={styles.header}>{section.titulo}</Text>
                     )}

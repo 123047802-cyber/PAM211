@@ -1,6 +1,6 @@
 import { Text, StyleSheet, View, Image, ImageBackground, Dimensions } from 'react-native'
 import React, {useState, useEffect} from 'react';
-
+//splash
 const BackgroundImage = require('../assets/splash-icon.png');
 const InnerBackground = require('../assets/gato.png');
 

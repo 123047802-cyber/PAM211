@@ -2,7 +2,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, Modal } from 'react-native';
 import React,{useState} from 'react';
-
+//contador simple
 //zona de componentes/main
 export default function ContadorScreen() {
   const[contador,setContador]= useState(0);

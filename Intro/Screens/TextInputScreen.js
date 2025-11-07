@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, Button, Alert, TextInput, Platform } from 'react-native';
 import React, { useState } from 'react';
-
+//alert
 export default function TextInputScreen() {
 
   const [nombre, setNombre] = useState('');

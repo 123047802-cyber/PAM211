@@ -1,6 +1,6 @@
 import { Text, StyleSheet, View,Alert, Platform, ActivityIndicator, Button } from 'react-native'
 import { useState } from 'react'
-
+//rueda de carga
 export default function ActivityIndScreen(){
   const[cargando, setCargando] = useState(false);
   const carga =() =>{
